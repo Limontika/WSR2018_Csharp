@@ -1,0 +1,13 @@
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\bin\Debug\FormsWSR2018.exe.config
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\bin\Debug\FormsWSR2018.exe
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\bin\Debug\FormsWSR2018.pdb
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csprojAssemblyReference.cache
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.DirectorForm.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.CustomerForm.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.CreateOrder.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.ManagerForm.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.Properties.Resources.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.StoreKeeperForm.resources
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csproj.GenerateResource.cache
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.exe
+C:\Users\z\source\repos\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.pdb

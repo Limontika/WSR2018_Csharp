@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace FormsWSR2018
 {
@@ -51,8 +52,8 @@ namespace FormsWSR2018
                 cmd.CommandText = sql;
                 MySqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();*/
-                int.TryParse(reader[0].ToString(), out id_user);
-                int.TryParse(reader[1].ToString(), out id_role);
+                /*int.TryParse(reader[0].ToString(), out id_user);
+                int.TryParse(reader[1].ToString(), out id_role);*/
             }
             catch
             {
@@ -66,7 +67,7 @@ namespace FormsWSR2018
 
 
             // TODO: Сделать переходы в такой констуркции, так же передавать id_user и id_role на формы которым это жизненно необходимо
-            if (id_role == 1)
+            /*if (id_role == 1)
             {
                 Form customer = new Заказчик(id_user, id_role);
                 customer.ShowDialog();
@@ -93,7 +94,7 @@ namespace FormsWSR2018
                 director.ShowDialog();
                 textBox1.Text = "";
                 textBox2.Text = "";
-            }
+            }*/
         }
 
         private void Autorization_FormClosing(object sender, FormClosingEventArgs e)

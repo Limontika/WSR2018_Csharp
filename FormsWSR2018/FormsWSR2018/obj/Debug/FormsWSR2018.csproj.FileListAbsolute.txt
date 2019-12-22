@@ -29,3 +29,5 @@ C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\F
 C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csproj.GenerateResource.cache
 C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.exe
 C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.pdb
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.ListsForm.resources
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.OrdersListForm.resources

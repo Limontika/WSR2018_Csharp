@@ -16,5 +16,11 @@ namespace FormsWSR2018
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Registration newForm = new Registration();
+            newForm.ShowDialog();
+        }
     }
 }

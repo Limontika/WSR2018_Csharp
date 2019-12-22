@@ -16,5 +16,22 @@ namespace FormsWSR2018
         {
             InitializeComponent();
         }
+
+        private void buttonAccountingIngredients_Click(object sender, EventArgs e)
+        {
+            ListsForm newForm = new ListsForm();
+            newForm.ShowDialog();
+        }
+
+        private void buttonOrdersList_Click(object sender, EventArgs e)
+        {
+            OrdersListForm newForm = new OrdersListForm();
+            newForm.ShowDialog();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

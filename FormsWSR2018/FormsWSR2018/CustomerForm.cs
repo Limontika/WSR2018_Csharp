@@ -16,5 +16,22 @@ namespace FormsWSR2018
         {
             InitializeComponent();
         }
+
+        private void buttonOrdersList_Click(object sender, EventArgs e)
+        {
+            OrdersListForm newForm = new OrdersListForm();
+            newForm.ShowDialog();
+        }
+
+        private void buttonCreateOrder_Click(object sender, EventArgs e)
+        {
+            CreateOrder newForm = new CreateOrder();
+            newForm.ShowDialog();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Close();   
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace FormsWSR2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ToolsForm());
+            Application.Run(new StoreKeeperForm());
         }
     }
 }

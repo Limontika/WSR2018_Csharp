@@ -45,6 +45,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -64,6 +65,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.Autorization_Load);
             // 
             // textBox2
             // 
@@ -104,6 +106,8 @@
             this.Controls.Add(this.button1);
             this.Name = "Autorization";
             this.Text = "Авторизация";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Autorization_FormClosing);
+            this.Load += new System.EventHandler(this.Autorization_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

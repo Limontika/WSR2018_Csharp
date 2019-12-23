@@ -182,7 +182,7 @@
             this.Controls.Add(this.buttonSaveImage);
             this.Controls.Add(this.buttonExit);
             this.Name = "ConstructorForm";
-            this.Text = "Конструктор";
+            this.Text = "Планы цехов";
             this.Load += new System.EventHandler(this.ConstructorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

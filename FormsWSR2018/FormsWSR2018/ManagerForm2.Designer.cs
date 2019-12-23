@@ -69,6 +69,7 @@
             this.buttonExit.TabIndex = 3;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // ManagerForm2
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.buttonOrdersList);
             this.Controls.Add(this.buttonAccountingIngredients);
             this.Name = "ManagerForm2";
-            this.Text = "Экран менеджера";
+            this.Text = "Менеджер по закупкам";
             this.ResumeLayout(false);
 
         }

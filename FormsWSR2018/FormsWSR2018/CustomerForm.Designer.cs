@@ -41,6 +41,7 @@
             this.buttonOrdersList.TabIndex = 0;
             this.buttonOrdersList.Text = "Список заказов";
             this.buttonOrdersList.UseVisualStyleBackColor = true;
+            this.buttonOrdersList.Click += new System.EventHandler(this.buttonOrdersList_Click);
             // 
             // buttonCreateOrder
             // 
@@ -50,6 +51,7 @@
             this.buttonCreateOrder.TabIndex = 1;
             this.buttonCreateOrder.Text = "Оформить заказ";
             this.buttonCreateOrder.UseVisualStyleBackColor = true;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
             // buttonExit
             // 
@@ -59,6 +61,7 @@
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // CustomerForm
             // 

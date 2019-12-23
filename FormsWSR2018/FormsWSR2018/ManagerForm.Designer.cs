@@ -92,7 +92,7 @@
             this.Controls.Add(this.buttonOrdersList);
             this.Controls.Add(this.buttonAccountingIngredients);
             this.Name = "ManagerForm";
-            this.Text = "Экран менеджера";
+            this.Text = "Менеджер по работе с клиентами";
             this.ResumeLayout(false);
 
         }

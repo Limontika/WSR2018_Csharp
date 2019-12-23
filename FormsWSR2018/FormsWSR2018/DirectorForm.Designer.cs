@@ -44,6 +44,7 @@
             this.buttonAccountingTools.TabIndex = 0;
             this.buttonAccountingTools.Text = "Учёт инструментов";
             this.buttonAccountingTools.UseVisualStyleBackColor = true;
+            this.buttonAccountingTools.Click += new System.EventHandler(this.buttonAccountingTools_Click);
             // 
             // buttonAccountingIngredients
             // 
@@ -53,6 +54,7 @@
             this.buttonAccountingIngredients.TabIndex = 1;
             this.buttonAccountingIngredients.Text = "Учет ингридиентов и украшений";
             this.buttonAccountingIngredients.UseVisualStyleBackColor = true;
+            this.buttonAccountingIngredients.Click += new System.EventHandler(this.buttonAccountingIngredients_Click);
             // 
             // buttonPlansShopFloor
             // 
@@ -62,6 +64,7 @@
             this.buttonPlansShopFloor.TabIndex = 2;
             this.buttonPlansShopFloor.Text = "Планы цехов";
             this.buttonPlansShopFloor.UseVisualStyleBackColor = true;
+            this.buttonPlansShopFloor.Click += new System.EventHandler(this.buttonPlansShopFloor_Click);
             // 
             // buttonOrdersList
             // 
@@ -71,6 +74,7 @@
             this.buttonOrdersList.TabIndex = 3;
             this.buttonOrdersList.Text = "Список заказов";
             this.buttonOrdersList.UseVisualStyleBackColor = true;
+            this.buttonOrdersList.Click += new System.EventHandler(this.buttonOrdersList_Click);
             // 
             // buttonReport
             // 
@@ -89,6 +93,7 @@
             this.buttonExit.TabIndex = 5;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // DirectorForm
             // 

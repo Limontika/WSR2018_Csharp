@@ -16,5 +16,17 @@ namespace FormsWSR2018
         {
             InitializeComponent();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Вы уверены, что хотите вернуться обратно на форму авторизации",
+                "Сообщение",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.OK)
+                Close();
+        }
     }
 }

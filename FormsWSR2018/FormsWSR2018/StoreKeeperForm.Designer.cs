@@ -69,6 +69,7 @@
             this.buttonExit.TabIndex = 3;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // StoreKeeperForm
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.buttonOrdersList);
             this.Controls.Add(this.buttonAccountingIngredients);
             this.Name = "StoreKeeperForm";
-            this.Text = "Экран кладовщика";
+            this.Text = "Экран мастера";
             this.ResumeLayout(false);
 
         }

@@ -57,3 +57,13 @@ D:\myProject\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csp
 D:\myProject\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csproj.CopyComplete
 D:\myProject\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.exe
 D:\myProject\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.pdb
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\Google.Protobuf.dll
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\MySql.Data.dll
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\Renci.SshNet.dll
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\Google.Protobuf.xml
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\MySql.Data.xml
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\bin\Debug\Renci.SshNet.xml
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.ListsForm.resources
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.OrdersListForm.resources
+C:\Users\z\Documents\GitHub\WSR2018_Csharp\FormsWSR2018\FormsWSR2018\obj\Debug\FormsWSR2018.csproj.CopyComplete

@@ -53,6 +53,7 @@ namespace FormsWSR2018
             this.startDraggingPoint = Point.Empty;
             this.Cursor = Cursors.Default;
         }
+
         private void mouseDown(object sender, MouseEventArgs e)
         {
             draggedPiece = sender as Control;
@@ -74,7 +75,8 @@ namespace FormsWSR2018
             switch (comboBox1.SelectedItem.ToString())
             {
                 case "Заготовительный цех":
-                    if (Directory.EnumerateFiles(path + "Запланированные/", "Заготовительный цех.png", SearchOption.TopDirectoryOnly).ToString() == "Заготовительный цех.png")  
+                    //Console.WriteLine(Directory.EnumerateFiles(path + "Запланированные/", "Заготовительный цех.png", SearchOption.TopDirectoryOnly).Count());
+                    if (Directory.EnumerateFiles(path + "Запланированные/", "Заготовительный цех.png", SearchOption.TopDirectoryOnly).Count() == 1)  
                     {
                         pictureBox1.Load(path + "Запланированные/Заготовительный цех.png");
                     }
@@ -85,16 +87,44 @@ namespace FormsWSR2018
                     //pictureBox1.Load(path + "Заготовительный цех.png");
                     break;
                 case "Пекарный цех":
-                    pictureBox1.Load(path + "Пекарный цех.png");
+                    if (Directory.EnumerateFiles(path + "Запланированные/", "Пекарный цех.png", SearchOption.TopDirectoryOnly).Count() == 1)
+                    {
+                        pictureBox1.Load(path + "Запланированные/Пекарный цех.png");
+                    }
+                    else
+                    {
+                        pictureBox1.Load(path + "Пекарный цех.png");
+                    }
                     break;
                 case "Упаковочный цех":
-                    pictureBox1.Load(path + "Упаковочный цех.png");
+                    if (Directory.EnumerateFiles(path + "Запланированные/", "Упаковочный цех.png", SearchOption.TopDirectoryOnly).Count() == 1)
+                    {
+                        pictureBox1.Load(path + "Запланированные/Упаковочный цех.png");
+                    }
+                    else
+                    {
+                        pictureBox1.Load(path + "Упаковочный цех.png");
+                    }
                     break;
                 case "Цех монтажа тортов":
-                    pictureBox1.Load(path + "Цех монтажа тортов.png");
+                    if (Directory.EnumerateFiles(path + "Запланированные/", "Цех монтажа тортов.png", SearchOption.TopDirectoryOnly).Count() == 1)
+                    {
+                        pictureBox1.Load(path + "Запланированные/Цех монтажа тортов.png");
+                    }
+                    else
+                    {
+                        pictureBox1.Load(path + "Цех монтажа тортов.png");
+                    }
                     break;
                 case "Цех оформления":
-                    pictureBox1.Load(path + "Цех оформления.png");
+                    if (Directory.EnumerateFiles(path + "Запланированные/", "Цех оформления.png", SearchOption.TopDirectoryOnly).Count() == 1)
+                    {
+                        pictureBox1.Load(path + "Запланированные/Цех оформления.png");
+                    }
+                    else
+                    {
+                        pictureBox1.Load(path + "Цех оформления.png");
+                    }
                     break;
             }
         }

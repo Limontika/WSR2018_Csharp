@@ -257,5 +257,17 @@ namespace FormsWSR2018
             pb.BringToFront();
             pictureBox.Add(pb);
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Вы уверены, что хотите вернуться обратно?",
+                "Сообщение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+                Close();
+        }
     }
 }

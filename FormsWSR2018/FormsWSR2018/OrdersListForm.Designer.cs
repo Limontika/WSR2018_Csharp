@@ -30,9 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonChangeStatus = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +37,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonChangeStatus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,33 +71,6 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(939, 388);
             this.dataGridView2.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(865, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(626, 426);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(100, 25);
-            this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonChangeStatus
-            // 
-            this.buttonChangeStatus.Location = new System.Drawing.Point(732, 426);
-            this.buttonChangeStatus.Name = "buttonChangeStatus";
-            this.buttonChangeStatus.Size = new System.Drawing.Size(127, 25);
-            this.buttonChangeStatus.TabIndex = 6;
-            this.buttonChangeStatus.Text = "Изменить статус";
-            this.buttonChangeStatus.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -145,6 +118,36 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Width = 170;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(865, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 25);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(626, 426);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(100, 25);
+            this.buttonAdd.TabIndex = 4;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonChangeStatus
+            // 
+            this.buttonChangeStatus.Location = new System.Drawing.Point(732, 426);
+            this.buttonChangeStatus.Name = "buttonChangeStatus";
+            this.buttonChangeStatus.Size = new System.Drawing.Size(127, 25);
+            this.buttonChangeStatus.TabIndex = 6;
+            this.buttonChangeStatus.Text = "Изменить статус";
+            this.buttonChangeStatus.UseVisualStyleBackColor = true;
+            this.buttonChangeStatus.Click += new System.EventHandler(this.buttonChangeStatus_Click);
             // 
             // OrdersListForm
             // 

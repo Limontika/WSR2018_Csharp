@@ -54,8 +54,9 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 40);
             this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "Выход";
+            this.buttonExit.Text = "Назад";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonSaveImage
             // 

@@ -49,8 +49,9 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 50);
             this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "Выход";
+            this.buttonExit.Text = "Назад";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCreateOrder
             // 
@@ -60,6 +61,7 @@
             this.buttonCreateOrder.TabIndex = 1;
             this.buttonCreateOrder.Text = "Заказать";
             this.buttonCreateOrder.UseVisualStyleBackColor = true;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
             // buttonAddNote
             // 
@@ -69,6 +71,7 @@
             this.buttonAddNote.TabIndex = 2;
             this.buttonAddNote.Text = "Добавить";
             this.buttonAddNote.UseVisualStyleBackColor = true;
+            this.buttonAddNote.Click += new System.EventHandler(this.buttonAddNote_Click);
             // 
             // textBox1
             // 

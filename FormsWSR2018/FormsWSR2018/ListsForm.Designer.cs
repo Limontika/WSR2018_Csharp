@@ -83,8 +83,9 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(90, 30);
             this.buttonExit.TabIndex = 4;
-            this.buttonExit.Text = "Выход";
+            this.buttonExit.Text = "Назад";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonPlus1
             // 

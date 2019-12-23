@@ -43,6 +43,7 @@
             this.buttonAccountingIngredients.TabIndex = 0;
             this.buttonAccountingIngredients.Text = "Учет ингридиентов и украшений (only read)";
             this.buttonAccountingIngredients.UseVisualStyleBackColor = true;
+            this.buttonAccountingIngredients.Click += new System.EventHandler(this.buttonAccountingIngredients_Click);
             // 
             // buttonOrdersList
             // 
@@ -52,6 +53,7 @@
             this.buttonOrdersList.TabIndex = 1;
             this.buttonOrdersList.Text = "Список заказов";
             this.buttonOrdersList.UseVisualStyleBackColor = true;
+            this.buttonOrdersList.Click += new System.EventHandler(this.buttonOrdersList_Click);
             // 
             // buttonCreateOrder
             // 
@@ -61,6 +63,7 @@
             this.buttonCreateOrder.TabIndex = 2;
             this.buttonCreateOrder.Text = "Оформить заказ";
             this.buttonCreateOrder.UseVisualStyleBackColor = true;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
             // buttonReport
             // 

@@ -147,6 +147,7 @@
             this.buttonAddNote.TabIndex = 10;
             this.buttonAddNote.Text = "Добавить";
             this.buttonAddNote.UseVisualStyleBackColor = true;
+            this.buttonAddNote.Click += new System.EventHandler(this.buttonAddNote_Click);
             // 
             // buttonExit
             // 
@@ -154,8 +155,9 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(85, 30);
             this.buttonExit.TabIndex = 11;
-            this.buttonExit.Text = "Выход";
+            this.buttonExit.Text = "Назад";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label6
             // 

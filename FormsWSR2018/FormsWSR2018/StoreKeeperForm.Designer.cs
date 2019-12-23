@@ -62,6 +62,7 @@
             this.buttonProductSpecification.TabIndex = 2;
             this.buttonProductSpecification.Text = "Спецификация изделий";
             this.buttonProductSpecification.UseVisualStyleBackColor = true;
+            this.buttonProductSpecification.Click += new System.EventHandler(this.buttonProductSpecification_Click);
             // 
             // buttonExit
             // 

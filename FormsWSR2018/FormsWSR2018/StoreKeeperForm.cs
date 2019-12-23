@@ -40,5 +40,15 @@ namespace FormsWSR2018
             OrdersListForm newForm = new OrdersListForm();
             newForm.ShowDialog();
         }
+
+        private void buttonProductSpecification_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Данная функция не доступна, обратитесь к разработчикам",
+                "Сообщение",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button1);
+        }
     }
 }

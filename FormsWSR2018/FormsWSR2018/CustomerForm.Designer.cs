@@ -35,9 +35,9 @@
             // 
             // buttonOrdersList
             // 
-            this.buttonOrdersList.Location = new System.Drawing.Point(200, 20);
+            this.buttonOrdersList.Location = new System.Drawing.Point(12, 10);
             this.buttonOrdersList.Name = "buttonOrdersList";
-            this.buttonOrdersList.Size = new System.Drawing.Size(400, 80);
+            this.buttonOrdersList.Size = new System.Drawing.Size(370, 80);
             this.buttonOrdersList.TabIndex = 0;
             this.buttonOrdersList.Text = "Список заказов";
             this.buttonOrdersList.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // buttonCreateOrder
             // 
-            this.buttonCreateOrder.Location = new System.Drawing.Point(200, 120);
+            this.buttonCreateOrder.Location = new System.Drawing.Point(12, 110);
             this.buttonCreateOrder.Name = "buttonCreateOrder";
-            this.buttonCreateOrder.Size = new System.Drawing.Size(400, 80);
+            this.buttonCreateOrder.Size = new System.Drawing.Size(370, 80);
             this.buttonCreateOrder.TabIndex = 1;
             this.buttonCreateOrder.Text = "Оформить заказ";
             this.buttonCreateOrder.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(200, 220);
+            this.buttonExit.Location = new System.Drawing.Point(12, 210);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(400, 80);
+            this.buttonExit.Size = new System.Drawing.Size(370, 80);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(399, 297);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonCreateOrder);
             this.Controls.Add(this.buttonOrdersList);

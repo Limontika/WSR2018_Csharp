@@ -15,9 +15,10 @@ namespace FormsWSR2018
     {
 
         private string role = "Менеджер по продажам";
-        private int id_user;
+        private int id_user_this = 1;
+        private int id_user = 1;
         private int сounterOrder;
-        
+
         public CreateOrder()
         {
             InitializeComponent();
@@ -37,12 +38,11 @@ namespace FormsWSR2018
                 MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
-                Close();
+                this.Close();
         }
 
-        private void buttonAddNote_Click(object sender, EventArgs e)
+        private void buttonCreateOrder_Click(object sender, EventArgs e)
         {
-
 
             MySqlConnection conn = DB.GetDBConnection();
             try
@@ -60,34 +60,37 @@ namespace FormsWSR2018
             }
 
             string sql = "";
+            string last_name = "";
+            string first_name = "";
             List<string> nameCustomer = new List<string>();
-            //int count = dataGridView1.RowCount;
+
             DateTime pickDate = dateTimePicker1.Value;
 
             try
             {
                 if (role == "Менеджер по продажам")
                 {
-                    string[] temp = textBox3.Text.Split(new char[] { ' ' });
-                    foreach (var item in temp)
-                    {
-                        nameCustomer.Add(item);
-                    }
+                    id_user_this = int.Parse(comboBox1.SelectedIndex.ToString())+1;
+                    sql = $"SELECT last_name, first_name FROM users WHERE id={id_user_this}";
                 }
                 else if (role == "Заказчик")
                 {
-
                     sql = $"SELECT last_name, first_name FROM users WHERE id={id_user}";
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = sql;
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    reader.Read();
-                    foreach (var item in reader)
-                    {
-                        nameCustomer.Add(item.ToString());
-                    }
-
                 }
+
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    last_name = reader[0].ToString();
+                    first_name = reader[1].ToString();
+                }
+
+                reader.Close();
+
+                nameCustomer.Add(last_name);
+                nameCustomer.Add(first_name);
 
                 string numberOrder = "";
 
@@ -100,134 +103,118 @@ namespace FormsWSR2018
                     numberOrder = pickDate.ToString("ddMMyyyy") + nameCustomer[0].First() + nameCustomer[1].First() + сounterOrder;
                 }
 
-                // TODO: Проверить заполение заказчика и сделать заполнение менеджера
-                dataGridView1.Rows.Add(numberOrder, textBox2.Text.ToString(), nameCustomer[0] + " " + nameCustomer[1], "Василий", pickDate, textBox1.Text.ToString());
+                Console.WriteLine();
 
-                MessageBox.Show(
-                "Добавлено!",
-                "Сообщение",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+                int cost = 1000;
+                string text = "";
 
-            }
-            catch
-            {
-                MessageBox.Show(
-                "Ошибка проверте правильность данных!",
-                "Сообщение",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error,
-                MessageBoxDefaultButton.Button1);
-            }
+                if (role == "Менеджер по продажам")
+                {
+                    id_user_this = int.Parse(comboBox1.SelectedIndex.ToString()) + 1;
+                    sql = $"INSERT orders( description, created_at, updated_at, title, cost, customer_id, manager_id, state) VALUES ('{textBox1.Text.ToString()}','{pickDate}','{pickDate.AddDays(14)}', '{textBox2.Text.ToString()}', '{cost.ToString()}', {id_user_this}, {id_user}, 'Составление спецификации')";
+                    cost += 100;
+                    text = $"Заказ оформлен и поставленн статус 'Составление спецификации'. Номер заказа: {numberOrder}";
+                }
+                else if (role == "Заказчик")
+                {
+                    id_user_this = int.Parse(comboBox1.SelectedIndex.ToString()) + 1;
+                    sql = $"INSERT orders( description, created_at, updated_at, title, cost, customer_id, manager_id, state) VALUES ('{textBox1.Text.ToString()}','{pickDate}','{pickDate.AddDays(14)}', '{textBox2.Text.ToString()}', '{cost.ToString()}', {id_user}, {id_user_this}, 'Новый')";
+                    cost += 100;
+                    text = $"Заказ отправлен на проверку. Номер заказа: {numberOrder}";
+                }
 
-
-        }
-
-        private void buttonCreateOrder_Click(object sender, EventArgs e)
-        {
-
-            // TODO: сделать отправку в базу данных с dataGridView
-
-            /*try
-            {
-                sql = $"INSERT orders( customer_id, created_at, updated_at) VALUES ({id_user},'{now}','{now}'); ";
-                MySqlCommand cmd = conn.CreateCommand();
+                cmd = conn.CreateCommand();
                 cmd.CommandText = sql;
                 cmd.ExecuteNonQuery();
-
-                id_order = cmd.LastInsertedId;
-                int i = 0;
-
-                while (i != count)
-                {
-                    sql = $"INSERT orders_has_products (orders_id, products_vendor_code, quantity) VALUES ({id_order}, {dataGridView1.Rows[i].Cells[4].Value}, {dataGridView1.Rows[i].Cells[2].Value}); ";
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
-                    i++;
-                }
 
                 conn.Close();
 
                 MessageBox.Show(
-                "Заказ произведен",
+                text,
                 "Сообщение",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
-            }
 
-            catch (Exception er)
+            }
+            catch(Exception er)
             {
                 MessageBox.Show(
-                $"Не удалось передать заказ, повторите попытку (Ошибка {er})",
+                $"Ошибка {er}",
                 "Сообщение",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error,
                 MessageBoxDefaultButton.Button1);
-            }*/
+            }
 
-           
         }
 
         private void CreateOrder_Load(object sender, EventArgs e)
         {
+            string sql = "";
+            List<string> listUser = new List<string>();
+
+            MySqlConnection conn = DB.GetDBConnection();
+            try
+            {
+                conn.Open();
+            }
+            catch
+            {
+                MessageBox.Show(
+                "Проблемы с подключением к БД",
+                "Сообщение",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1);
+            }
+
             if (role == "Менеджер по продажам")
             {
                 label3.Text = "Заказчик";
-                comboBox1.Dispose();
-
-            }else if(role == "Заказчик")
-            {
-                MySqlConnection conn = DB.GetDBConnection();
-                try
-                {
-                    conn.Open();
-                }
-                catch
-                {
-                    MessageBox.Show(
-                    "Проблемы с подключением к БД",
-                    "Сообщение",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error,
-                    MessageBoxDefaultButton.Button1);
-                }
-
-                String loginUser = textBox1.Text;
-                String passUser = textBox2.Text;
-
-                List<string> listManager = new List<string>();
-
-                try
-                {
-                    // TODO: Написать запрос к базе на получение id_role
-                    string sql = $"SELECT last_name, first_name FROM users WHERE role = 'Менеджер по продажам'";
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = sql;
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        listManager.Add(reader[0] + " " + reader[1]);
-                    }
-
-                    comboBox1.Items.AddRange(listManager.ToArray());
-                }
-                catch
-                {
-                    MessageBox.Show(
-                    "Логин или пароль неправильны",
-                    "Сообщение",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Error,
-                    MessageBoxDefaultButton.Button1);
-                }
+                sql = $"SELECT last_name, first_name FROM users WHERE role = 'Заказчик'";
             }
+            else if (role == "Заказчик")
+            {
+
+                sql = $"SELECT last_name, first_name FROM users WHERE role = 'Менеджер по продажам'";
+
+            }
+
+            try
+            {
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    listUser.Add(reader[0] + " " + reader[1]);
+                }
+
+                comboBox1.Items.AddRange(listUser.ToArray());
+
+            }
+            catch(Exception er)
+            {
+               MessageBox.Show(
+               $"Ошибка {er}",
+               "Сообщение",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Error,
+               MessageBoxDefaultButton.Button1);
+            }
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form createCustomer = new Registration();
+            createCustomer.ShowDialog();
         }
     }
 }

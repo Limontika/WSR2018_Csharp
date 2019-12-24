@@ -161,6 +161,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OrdersListForm";
             this.Text = "Форма списка заказов";
+            this.Load += new System.EventHandler(this.OrdersListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

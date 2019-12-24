@@ -41,12 +41,8 @@ namespace FormsWSR2018
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Добавлен",
-                "Сообщение",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+            Form createOrder = new CreateOrder();
+            createOrder.ShowDialog();
         }
     }
 }

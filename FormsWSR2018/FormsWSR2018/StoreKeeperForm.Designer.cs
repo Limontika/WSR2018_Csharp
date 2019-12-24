@@ -36,7 +36,7 @@
             // 
             // buttonAccountingIngredients
             // 
-            this.buttonAccountingIngredients.Location = new System.Drawing.Point(200, 20);
+            this.buttonAccountingIngredients.Location = new System.Drawing.Point(12, 12);
             this.buttonAccountingIngredients.Name = "buttonAccountingIngredients";
             this.buttonAccountingIngredients.Size = new System.Drawing.Size(400, 90);
             this.buttonAccountingIngredients.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // buttonOrdersList
             // 
-            this.buttonOrdersList.Location = new System.Drawing.Point(200, 130);
+            this.buttonOrdersList.Location = new System.Drawing.Point(12, 122);
             this.buttonOrdersList.Name = "buttonOrdersList";
             this.buttonOrdersList.Size = new System.Drawing.Size(400, 90);
             this.buttonOrdersList.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // buttonProductSpecification
             // 
-            this.buttonProductSpecification.Location = new System.Drawing.Point(200, 240);
+            this.buttonProductSpecification.Location = new System.Drawing.Point(12, 232);
             this.buttonProductSpecification.Name = "buttonProductSpecification";
             this.buttonProductSpecification.Size = new System.Drawing.Size(400, 90);
             this.buttonProductSpecification.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(640, 20);
+            this.buttonExit.Location = new System.Drawing.Point(418, 12);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 90);
             this.buttonExit.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(524, 327);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonProductSpecification);
             this.Controls.Add(this.buttonOrdersList);

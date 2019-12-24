@@ -38,7 +38,7 @@
             // 
             // buttonAccountingTools
             // 
-            this.buttonAccountingTools.Location = new System.Drawing.Point(200, 20);
+            this.buttonAccountingTools.Location = new System.Drawing.Point(12, 21);
             this.buttonAccountingTools.Name = "buttonAccountingTools";
             this.buttonAccountingTools.Size = new System.Drawing.Size(400, 50);
             this.buttonAccountingTools.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // buttonAccountingIngredients
             // 
-            this.buttonAccountingIngredients.Location = new System.Drawing.Point(200, 90);
+            this.buttonAccountingIngredients.Location = new System.Drawing.Point(12, 91);
             this.buttonAccountingIngredients.Name = "buttonAccountingIngredients";
             this.buttonAccountingIngredients.Size = new System.Drawing.Size(400, 50);
             this.buttonAccountingIngredients.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // buttonPlansShopFloor
             // 
-            this.buttonPlansShopFloor.Location = new System.Drawing.Point(200, 160);
+            this.buttonPlansShopFloor.Location = new System.Drawing.Point(12, 161);
             this.buttonPlansShopFloor.Name = "buttonPlansShopFloor";
             this.buttonPlansShopFloor.Size = new System.Drawing.Size(400, 50);
             this.buttonPlansShopFloor.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // buttonOrdersList
             // 
-            this.buttonOrdersList.Location = new System.Drawing.Point(200, 230);
+            this.buttonOrdersList.Location = new System.Drawing.Point(12, 231);
             this.buttonOrdersList.Name = "buttonOrdersList";
             this.buttonOrdersList.Size = new System.Drawing.Size(400, 50);
             this.buttonOrdersList.TabIndex = 3;
@@ -78,16 +78,17 @@
             // 
             // buttonReport
             // 
-            this.buttonReport.Location = new System.Drawing.Point(200, 300);
+            this.buttonReport.Location = new System.Drawing.Point(12, 301);
             this.buttonReport.Name = "buttonReport";
             this.buttonReport.Size = new System.Drawing.Size(400, 50);
             this.buttonReport.TabIndex = 4;
             this.buttonReport.Text = "Отчёты";
             this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(640, 20);
+            this.buttonExit.Location = new System.Drawing.Point(452, 21);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 50);
             this.buttonExit.TabIndex = 5;
@@ -99,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(563, 361);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonReport);
             this.Controls.Add(this.buttonOrdersList);

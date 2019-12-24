@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.decoration = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonPlus1 = new System.Windows.Forms.Button();
             this.buttonMinus1 = new System.Windows.Forms.Button();
             this.buttonPlus2 = new System.Windows.Forms.Button();
             this.buttonMinus2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -56,30 +56,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 202);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // decoration
-            // 
-            this.decoration.AutoSize = true;
-            this.decoration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.decoration.Location = new System.Drawing.Point(24, 230);
-            this.decoration.Name = "decoration";
-            this.decoration.Size = new System.Drawing.Size(94, 20);
-            this.decoration.TabIndex = 2;
-            this.decoration.Text = "Украшения";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 260);
+            this.dataGridView2.Location = new System.Drawing.Point(20, 289);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(750, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(750, 200);
             this.dataGridView2.TabIndex = 3;
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(680, 420);
+            this.buttonExit.Location = new System.Drawing.Point(682, 495);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(90, 30);
             this.buttonExit.TabIndex = 4;
@@ -90,7 +80,7 @@
             // buttonPlus1
             // 
             this.buttonPlus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonPlus1.Location = new System.Drawing.Point(620, 15);
+            this.buttonPlus1.Location = new System.Drawing.Point(660, 15);
             this.buttonPlus1.Name = "buttonPlus1";
             this.buttonPlus1.Size = new System.Drawing.Size(50, 25);
             this.buttonPlus1.TabIndex = 5;
@@ -100,7 +90,7 @@
             // buttonMinus1
             // 
             this.buttonMinus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonMinus1.Location = new System.Drawing.Point(680, 15);
+            this.buttonMinus1.Location = new System.Drawing.Point(720, 15);
             this.buttonMinus1.Name = "buttonMinus1";
             this.buttonMinus1.Size = new System.Drawing.Size(50, 25);
             this.buttonMinus1.TabIndex = 6;
@@ -110,7 +100,7 @@
             // buttonPlus2
             // 
             this.buttonPlus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonPlus2.Location = new System.Drawing.Point(620, 225);
+            this.buttonPlus2.Location = new System.Drawing.Point(660, 258);
             this.buttonPlus2.Name = "buttonPlus2";
             this.buttonPlus2.Size = new System.Drawing.Size(50, 25);
             this.buttonPlus2.TabIndex = 7;
@@ -120,25 +110,35 @@
             // buttonMinus2
             // 
             this.buttonMinus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonMinus2.Location = new System.Drawing.Point(680, 225);
+            this.buttonMinus2.Location = new System.Drawing.Point(720, 258);
             this.buttonMinus2.Name = "buttonMinus2";
             this.buttonMinus2.Size = new System.Drawing.Size(50, 25);
             this.buttonMinus2.TabIndex = 8;
             this.buttonMinus2.Text = "-";
             this.buttonMinus2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(24, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Украшения";
+            // 
             // ListsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(784, 537);
             this.Controls.Add(this.buttonMinus2);
             this.Controls.Add(this.buttonPlus2);
             this.Controls.Add(this.buttonMinus1);
             this.Controls.Add(this.buttonPlus1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.decoration);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ListsForm";
@@ -154,12 +154,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label decoration;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonPlus1;
         private System.Windows.Forms.Button buttonMinus1;
         private System.Windows.Forms.Button buttonPlus2;
         private System.Windows.Forms.Button buttonMinus2;
+        private System.Windows.Forms.Label label2;
     }
 }

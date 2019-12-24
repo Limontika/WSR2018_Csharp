@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace WindowsFormsApp1
+namespace FormsWSR2018
 {
     class DB
     {
@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         {
             string host = "127.0.0.1";
             int port = 3306;
-            string database = "mydb";
+            string database = "logachev2";
             string username = "root";
             string password = "";
 

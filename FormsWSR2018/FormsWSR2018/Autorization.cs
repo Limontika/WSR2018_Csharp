@@ -8,12 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1;
 
 namespace FormsWSR2018
 {
     public partial class Autorization : Form
     {
+
+        private int id_user;
+        private string role;
+        private int counter;
+
         public Autorization()
         {
             InitializeComponent();
@@ -44,57 +48,74 @@ namespace FormsWSR2018
 
             String loginUser = textBox1.Text;
             String passUser = textBox2.Text;
+
             try
             {
                 // TODO: Написать запрос к базе на получение id_role
-                //string sql = $"SELECT id, role_id FROM users WHERE login='{loginUser}' AND password='{passUser}'";
-               /* MySqlCommand cmd = conn.CreateCommand();
+                string sql = $"SELECT id, role FROM users WHERE login='{loginUser}' AND password='{passUser}'";
+                MySqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = sql;
                 MySqlDataReader reader = cmd.ExecuteReader();
-                reader.Read();*/
-                /*int.TryParse(reader[0].ToString(), out id_user);
-                int.TryParse(reader[1].ToString(), out id_role);*/
+                reader.Read();
+                int.TryParse(reader[0].ToString(), out id_user);
+                role = reader[1].ToString();
             }
             catch
             {
+                counter += 1;
+                
                 MessageBox.Show(
-                "Логин или пароль неправильны",
+                 "Логин или пароль неправильны",
                 "Сообщение",
-                MessageBoxButtons.OKCancel,
+                MessageBoxButtons.OK,
                 MessageBoxIcon.Error,
                 MessageBoxDefaultButton.Button1);
             }
 
+            if (counter == 3)
+            {
+                this.Enabled = false;
+                System.Threading.Thread.Sleep(5000);
+                this.Enabled = true;
+            }
+
 
             // TODO: Сделать переходы в такой констуркции, так же передавать id_user и id_role на формы которым это жизненно необходимо
-            /*if (id_role == 1)
+            if (role == "Заказчик")
             {
-                Form customer = new Заказчик(id_user, id_role);
-                customer.ShowDialog();
+                /*Form customer = new Заказчик(id_user, role);
+                customer.ShowDialog();*/
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-            else if (id_role == 2)
+            else if (role == "Мастер")
             {
-                Form storekeeper = new storekeeper();
-                storekeeper.ShowDialog();
+               /* Form storekeeper = new storekeeper();
+                storekeeper.ShowDialog();*/
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-            else if (id_role == 3)
+            else if (role == "Менеджер по закупкам")
             {
-                Form manager = new manager(id_user, id_role);
-                manager.ShowDialog();
+                /*Form manager = new manager(id_user, role);
+                manager.ShowDialog();*/
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-            else if (id_role == 4)
+            else if (role == "Менеджер по продажам")
             {
-                Form director = new director(id_user, id_role);
-                director.ShowDialog();
+                /*Form director = new director(id_user, role);
+                director.ShowDialog();*/
                 textBox1.Text = "";
                 textBox2.Text = "";
-            }*/
+            }
+            else if (role == "Директор")
+            {
+                /*Form director = new director(id_user, role);
+                director.ShowDialog();*/
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
         }
 
         private void Autorization_FormClosing(object sender, FormClosingEventArgs e)
